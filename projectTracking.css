@@ -1,0 +1,128 @@
+html,
+body {
+  width: 1440px;
+}
+
+.item-a {
+  grid-column-start: 1;
+  grid-column-end: span col2-start;
+  grid-row-start: 1;
+  grid-row-end: span 1;
+}
+.item-a img {
+  padding: 55px;
+  padding-left: 155px;
+}
+.topNav {
+  padding: 65px;
+  padding-left: 155px;
+}
+.topNav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 0.8rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  color: hsl(230, 29%, 20%);
+  font-weight: 600;
+}
+.topNav a:nth-child(4) {
+  color: hsl(231, 7%, 65%);
+  margin-left: 6rem;
+}
+.item-b {
+  grid-column-start: 2;
+  grid-column-end: span col2-end;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  background-color: hsl(207, 33%, 95%);
+  border-radius: 14px;
+}
+.item-c {
+  grid-column-start: 1;
+  grid-column-end: span col2-start;
+  grid-row-start: 2;
+  grid-row-end: span 2;
+
+  margin-top: 55px;
+}
+.item-c p,
+h1 {
+  padding-left: 155px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.item-c span {
+  text-transform: uppercase;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  background-color: hsl(230, 29%, 20%);
+  border-radius: 24px;
+  letter-spacing: 0.1rem;
+  margin-right: 1rem;
+}
+.item-c h1 {
+  text-transform: uppercase;
+  margin-top: 1px;
+  font-size: 4rem;
+  width: 40%;
+  color: hsl(230, 29%, 20%);
+}
+
+.firstLine {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.9rem;
+  color: hsl(231, 7%, 65%);
+}
+.secondLine {
+  color: hsl(231, 7%, 65%);
+  margin-top: -20px;
+  font-size: 1.3rem;
+  width: 17%;
+}
+.thirdLine {
+  margin-top: 50px;
+  text-transform: uppercase;
+  color: hsl(231, 7%, 65%);
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+}
+.item-c button {
+  width: 12%;
+  height: 32px;
+  padding: 1px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-right: 15px;
+  color: white;
+  background-color: hsl(0, 100%, 68%);
+  border: none;
+  border-radius: 6px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+/*
+.item-d {
+  grid-column-start: 2;
+  grid-column-end: span col2-end;
+  grid-row-start: 2;
+  grid-row-end: span 2;
+  background-color: rgb(158, 148, 148);
+
+  border: 4px solid rgb(50, 50, 50);
+}
+.item-d img {
+  width: 100px;
+}
+*/
+.item-e {
+  grid-column-start: 1;
+  grid-column-end: span col2-end;
+  grid-row-start: 4;
+  grid-row-end: span 3;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 155px 255px 50px;
+}
