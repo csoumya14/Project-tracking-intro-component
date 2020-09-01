@@ -1,8 +1,11 @@
-html,
-body {
-  width: 1440px;
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 200px;
 }
-
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 .item-a {
   grid-column-start: 1;
   grid-column-end: span col2-start;
@@ -13,20 +16,24 @@ body {
   padding: 55px;
   padding-left: 155px;
 }
+.hamburger {
+  display: none;
+}
 .topNav {
-  padding: 65px;
   padding-left: 155px;
+  margin-top: 55px;
 }
 .topNav a {
   text-decoration: none;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 0.8rem;
   font-family: 'Barlow Condensed', sans-serif;
-  color: hsl(230, 29%, 20%);
-  font-weight: 600;
+  color: hsl(230, 11%, 40%);
+  font-weight: 700;
 }
-.topNav a:nth-child(4) {
+.topNav a:nth-child(5) {
   color: hsl(231, 7%, 65%);
   margin-left: 6rem;
 }
@@ -38,6 +45,13 @@ body {
   grid-row-end: span 2;
   background-color: hsl(207, 33%, 95%);
   border-bottom-left-radius: 54px;
+}
+
+.item-img {
+  grid-column-start: 2;
+  grid-column-end: span col2-end;
+  grid-row-start: 2;
+  grid-row-end: span 3;
 }
 .image-container {
   width: 100%;
@@ -62,7 +76,6 @@ body {
 .item-c p,
 h1 {
   padding-left: 155px;
-  font-family: 'Barlow Condensed', sans-serif;
 }
 .item-c span {
   text-transform: uppercase;
@@ -71,9 +84,10 @@ h1 {
   background-color: hsl(230, 29%, 20%);
   border-radius: 24px;
   letter-spacing: 0.1rem;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 .item-c h1 {
+  font-family: 'Barlow Condensed', sans-serif;
   text-transform: uppercase;
   margin-top: 1px;
   font-size: 4rem;
@@ -83,6 +97,7 @@ h1 {
 
 .firstLine {
   text-transform: uppercase;
+  font-family: 'Barlow Condensed', sans-serif;
   letter-spacing: 0.2rem;
   font-size: 0.9rem;
   color: hsl(231, 7%, 65%);
@@ -90,8 +105,10 @@ h1 {
 .secondLine {
   color: hsl(231, 7%, 65%);
   margin-top: -20px;
-  font-size: 1.3rem;
-  width: 17%;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Barlow ', sans-serif;
+  width: 20%;
 }
 .thirdLine {
   margin-top: 50px;
@@ -99,15 +116,18 @@ h1 {
   color: hsl(231, 7%, 65%);
   font-size: 0.8rem;
   letter-spacing: 0.2rem;
+  font-family: 'Barlow Condensed', sans-serif;
 }
 .item-c button {
   width: 12%;
   height: 32px;
   padding: 1px;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
   margin-right: 15px;
-  color: white;
+  color: hsl(207, 33%, 95%);
   background-color: hsl(0, 100%, 68%);
   border: none;
   border-radius: 6px;
@@ -125,4 +145,170 @@ h1 {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 155px 255px 50px;
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 155px 255px 50px;
+  }
+  .item-a img {
+    padding-left: 35px;
+    margin-top: -10px;
+  }
+  .item-img {
+    grid-column-start: 1;
+    grid-column-end: span col1-end;
+    grid-row-start: 2;
+    grid-row-end: span 2;
+  }
+  .item-b {
+    margin: 0px;
+    grid-column-start: 2;
+    grid-column-end: span col2-end;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+    background-color: hsl(207, 33%, 95%);
+    border-bottom-left-radius: 54px;
+  }
+  .topNav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 130px;
+    left: 35px;
+    padding-left: 0px;
+    margin-top: 0px;
+    background-color: white;
+    width: 80vw;
+    height: 38vh;
+    overflow: hidden;
+
+    box-shadow: 2px 1px 5px #dbdad7, -0.1em 0 0.4em #dbdad7;
+    border-radius: 3px;
+    color: hsl(230, 29%, 20%);
+    /* hide the menu  by default */
+    transform: translateY(-100%);
+    /* transition adds a little animation when sliding in and out the menu */
+    transition: transform 0.2s ease;
+  }
+  .showNav {
+    /*show the menu*/
+    transform: translateY(0);
+  }
+  .topNav a {
+    text-decoration: none;
+
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin-left: 0px;
+    font-size: 1rem;
+
+    font-family: 'Barlow Condensed', sans-serif;
+    color: hsl(230, 29%, 20%);
+    font-weight: 600;
+  }
+  .topNav a:nth-child(1) {
+    margin-top: -10px;
+  }
+  .topNav a:nth-child(2) {
+    margin-left: -3px;
+  }
+  .topNav a:nth-child(5) {
+    margin-top: 0px;
+    margin-left: 8px;
+    color: hsl(231, 7%, 65%);
+  }
+  .topNav a:nth-child(4) {
+    width: 200px;
+    height: 47px;
+    margin-top: -50px;
+    border-bottom: 1px solid hsl(231, 7%, 65%);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .hamburger {
+    display: block;
+    width: 100%;
+    height: 22px;
+    margin-top: 45px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .hamburger_img {
+    margin-left: 110px;
+  }
+  .close_img {
+    margin-left: -25px;
+    visibility: hidden;
+  }
+
+  .item-c {
+    grid-column-start: 1;
+    grid-column-end: span col2-start;
+    grid-row-start: 2;
+    grid-row-end: span 2;
+    margin-top: 250px;
+  }
+  .item-c p,
+  h1 {
+    padding-left: 35px;
+  }
+  .image-container {
+    width: 100%;
+    height: 90%;
+
+    margin-top: -2px;
+    overflow: hidden;
+  }
+  .image-container img {
+    margin-left: 10px;
+    margin-top: 0px;
+    width: 134%;
+    height: 90%;
+  }
+  .firstLine {
+    letter-spacing: 0.2rem;
+    font-size: 0.9rem;
+    margin-top: 80px;
+    width: 100%;
+  }
+  .item-c h1 {
+    margin-top: 10px;
+    font-size: 2.1rem;
+    width: 80%;
+    color: hsl(230, 29%, 20%);
+  }
+  .attribution {
+    margin-top: 400px;
+  }
+  .secondLine {
+    color: hsl(231, 7%, 65%);
+    padding-top: -100px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    width: 75%;
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+
+  .thirdLine {
+    margin-top: 30px;
+    width: 100%;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+  }
+  .item-c button {
+    width: 40%;
+    font-weight: 700;
+    font-size: 0.8rem;
+
+    letter-spacing: 0.1rem;
+  }
+  .attribution {
+    margin-top: 400px;
+  }
 }

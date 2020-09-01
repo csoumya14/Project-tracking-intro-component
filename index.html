@@ -10,20 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet" />
     <title>Frontend Mentor | Project tracking intro component</title>
     <link rel="stylesheet" href="projectTracking.css" />
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-        margin-top: 200px;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <div class="container">
@@ -31,12 +20,19 @@
         <img src="./images/logo.svg" alt="logo" />
       </div>
       <div class="item-b">
+        <div class="hamburger">
+          <img class="hamburger_img" src="./images/icon-hamburger.svg" alt="lines" />
+          <img class="close_img" src="./images/icon-close.svg" alt="lines" />
+        </div>
         <div class="topNav">
           <a href="#home">Product</a>
           <a href="#news">Features</a>
           <a href="#contact">Pricing</a>
+          <a href="#contact"></a>
           <a href="#about">Login</a>
         </div>
+      </div>
+      <div class="item-img">
         <div class="image-container">
           <img src="./images/illustration-devices.svg" alt="logo" />
         </div>
@@ -57,5 +53,6 @@
         </p>
       </footer>
     </div>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
