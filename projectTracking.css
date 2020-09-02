@@ -191,7 +191,7 @@ h1 {
     border-radius: 3px;
     color: hsl(230, 29%, 20%);
     /* hide the menu  by default */
-    transform: translateY(-100%);
+    transform: translateY(-200%);
     /* transition adds a little animation when sliding in and out the menu */
     transition: transform 0.2s ease;
   }
